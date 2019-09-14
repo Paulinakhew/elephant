@@ -1,4 +1,5 @@
 from xecd_rates_client import XecdClient
+# install using pip install xecd-rates-client or pip3 install xecd-rates-client
 xecd = XecdClient('xe891090202', '8ht3qjhq8vnu0dbb91ai40p44b')
 
 def usd_to(currency: str):
