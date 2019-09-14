@@ -6,7 +6,6 @@ from datetime import datetime
 from flask import Flask, render_template, request, redirect, session, url_for
 
 app = Flask(__name__)
-app.secret_key = 'paulina is cool'
 
 HUMANIZE_USE_UTC = True
 
@@ -17,6 +16,13 @@ def menu():
         return render_template('menu.html')
     else:
         return render_template('menu.html')
+
+@app.route('/display',methods=['GET'])
+def display():
+    if request.method=="GET":
+        return render_template('display.html')
+    else:
+        return render_template('display.html')
 
 
 if __name__ == '__main__':
