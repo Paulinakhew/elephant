@@ -7,3 +7,6 @@ def usd_to(currency: str):
 
 def cad_to(currency: str):
     return xecd.convert_from("CAD", currency)['to'][0]['mid']
+
+def convert(currency1: str, currency2: str):
+    return xecd.convert_from(currency1, currency2)['to'][0]['mid']
